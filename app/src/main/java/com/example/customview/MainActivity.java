@@ -15,4 +15,8 @@ public class MainActivity extends BaseActivity {
     public void goToLoopView(View view) {
         startAct(LoopViewActivity.class);
     }
+
+    public void goToNineCell(View view) {
+        startAct(NineCellActivity.class);
+    }
 }
