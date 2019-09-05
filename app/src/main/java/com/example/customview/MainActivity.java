@@ -1,15 +1,18 @@
 
 package com.example.customview;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
 
-import android.os.Bundle;
+import com.example.customview.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    public void goToLoopView(View view) {
+        startAct(LoopViewActivity.class);
     }
 }
