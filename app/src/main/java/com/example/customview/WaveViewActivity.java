@@ -1,6 +1,6 @@
 package com.example.customview;
 
-import com.example.customview.Bezie.WaveView;
+import com.example.customview.bezie.WaveView;
 import com.example.customview.base.BaseActivity;
 
 /***
@@ -24,6 +24,6 @@ public class WaveViewActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        waveView.setProgress(50);
+        waveView.setProgress(75);
     }
 }

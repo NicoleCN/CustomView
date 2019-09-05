@@ -1,4 +1,4 @@
-package com.example.customview.Bezie;
+package com.example.customview.bezie;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -38,7 +38,7 @@ public class WaveView extends View {
     //当前波浪的进度
     private int progress = 0;
     //当前波浪的速度
-    private int waveSpeech = 150;
+    private int waveSpeech = 100;
     //是否启用了自动增长进度
     private boolean isAutoIncrease = false;
 

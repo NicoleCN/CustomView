@@ -23,4 +23,8 @@ public class MainActivity extends BaseActivity {
     public void goToWaveView(View view) {
         startAct(WaveViewActivity.class);
     }
+
+    public void goToBarChartView(View view) {
+        startAct(BarChartActivity.class);
+    }
 }

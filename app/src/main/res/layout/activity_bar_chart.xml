@@ -4,10 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.example.customview.bezie.WaveView
-        android:id="@+id/waveView"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        />
+    <com.example.customview.barchart.BarChartView
+        android:id="@+id/barCharView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
 </LinearLayout>

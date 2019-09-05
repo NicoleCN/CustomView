@@ -30,6 +30,9 @@
         <activity
             android:name=".WaveViewActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".BarChartActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
