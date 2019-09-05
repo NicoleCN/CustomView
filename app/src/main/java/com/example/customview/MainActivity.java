@@ -19,4 +19,8 @@ public class MainActivity extends BaseActivity {
     public void goToNineCell(View view) {
         startAct(NineCellActivity.class);
     }
+
+    public void goToWaveView(View view) {
+        startAct(WaveViewActivity.class);
+    }
 }
