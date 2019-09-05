@@ -30,10 +30,6 @@ public class LoopView extends View {
     protected Handler mHandler;
     private GestureDetector mGestureDetector;
     private int mDescSize = LoopUtil.DEFAULT_TEXT_SIZE;
-    /**
-     * 间距因子 需要大于1.0f
-     */
-    private float mItemFactor = LoopUtil.DEFAULT_ITEM_FACTOR;
     private int mLineColor = 0xffc5c5c5;
     private int mCenterColor = 0xff313131;
     private int mOuterColor = 0xffafafaf;
@@ -50,8 +46,7 @@ public class LoopView extends View {
     private int measuredWidth;
     private int measuredHeight;
     private int textHeight;
-    private int maxItemHeight;
-    protected int normalItemHeight;
+    protected int maxItemHeight;
     //半圆弧
     private int semicircle;
     private int radius;
@@ -144,11 +139,8 @@ public class LoopView extends View {
 
         //默认7个的话 间距就是6
         maxItemHeight = (semicircle / (mVisibleCount - 1));
-
-        normalItemHeight = (int) (mItemFactor * maxItemHeight);
-
-        mFirstLineY = (int) ((measuredHeight - normalItemHeight) / 2f);
-        mSecondLineY = (int) ((measuredHeight + normalItemHeight) / 2f);
+        mFirstLineY = (int) ((measuredHeight - maxItemHeight) / 2f);
+        mSecondLineY = (int) ((measuredHeight + maxItemHeight) / 2f);
 
         initPosition = 0;
         preSelectIndex = initPosition;
@@ -266,8 +258,8 @@ public class LoopView extends View {
                 previousY = event.getRawY();
                 totalScrollY += dy;
 
-                float top = -initPosition * normalItemHeight;
-                float bottom = (mDataList.size() - 1 - initPosition) * normalItemHeight;
+                float top = -initPosition * maxItemHeight;
+                float bottom = (mDataList.size() - 1 - initPosition) * maxItemHeight;
 
                 if (totalScrollY < top) {
                     totalScrollY = (int) top;
@@ -305,10 +297,10 @@ public class LoopView extends View {
     protected void smoothScroll(short type) {
         cancelHandler();
         if (type == LoopUtil.TYPE_FLING || type == LoopUtil.TYPE_DRAG) {
-            mOffset = totalScrollY % normalItemHeight;
+            mOffset = totalScrollY % maxItemHeight;
             //超过办个自动转到下个
-            if (mOffset > normalItemHeight / 2f) {
-                mOffset = (int) (normalItemHeight - (float) mOffset);
+            if (mOffset > maxItemHeight / 2f) {
+                mOffset = (int) (maxItemHeight - (float) mOffset);
             } else {
                 mOffset = -mOffset;
             }

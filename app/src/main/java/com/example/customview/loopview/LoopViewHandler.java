@@ -91,11 +91,13 @@ public class LoopViewHandler extends Handler {
             mLoopView.smoothScroll(LoopUtil.TYPE_FLING);
             return;
         }
+        //滑动速度放大2倍
+        int scale = 2;
         //a*10毫秒/1000 转换单位
-        int scrollPx = (int) (acc * 10 / 1000);
+        int scrollPx = (int) (acc * 10 / 1000*scale);
         mLoopView.totalScrollY = mLoopView.totalScrollY - scrollPx;
 
-        float itemHeight = mLoopView.normalItemHeight;
+        float itemHeight = mLoopView.maxItemHeight;
         int initPosition = mLoopView.initPosition;
 
         //处理开始和末尾的情况 拉到最后面和最前面 加速度的情况

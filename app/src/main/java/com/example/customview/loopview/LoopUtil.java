@@ -9,8 +9,7 @@ import android.content.res.Resources;
  */
 public class LoopUtil {
 
-    public static final int DEFAULT_TEXT_SIZE = 14;
-    public static final float DEFAULT_ITEM_FACTOR = 1f;
+    public static final int DEFAULT_TEXT_SIZE = 20;
     public static final int DEFAULT_VISIBLE_ITEMS = 7;
 
     //action
