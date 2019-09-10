@@ -22,16 +22,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoopViewActivity"
+            android:name=".loopview.LoopViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".NineCellActivity"
+            android:name=".ninepicture.NineCellActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".WaveViewActivity"
+            android:name=".bezie.WaveViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BarChartActivity"
+            android:name=".barchart.BarChartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".shadow.ShadowActivity"
             android:screenOrientation="portrait" />
     </application>
 

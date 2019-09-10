@@ -1,4 +1,4 @@
-package com.example.customview;
+package com.example.customview.ninepicture;
 
 import android.graphics.Bitmap;
 import android.os.Environment;
@@ -7,8 +7,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.customview.R;
 import com.example.customview.base.BaseActivity;
-import com.example.customview.ninepicture.NineCellBitmap;
 
 import java.io.File;
 import java.util.ArrayList;

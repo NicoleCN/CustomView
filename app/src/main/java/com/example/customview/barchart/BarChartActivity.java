@@ -1,6 +1,6 @@
-package com.example.customview;
+package com.example.customview.barchart;
 
-import com.example.customview.barchart.BarChartView;
+import com.example.customview.R;
 import com.example.customview.base.BaseActivity;
 
 import java.util.ArrayList;

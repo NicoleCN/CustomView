@@ -1,6 +1,6 @@
-package com.example.customview;
+package com.example.customview.bezie;
 
-import com.example.customview.bezie.WaveView;
+import com.example.customview.R;
 import com.example.customview.base.BaseActivity;
 
 /***

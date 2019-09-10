@@ -3,7 +3,12 @@ package com.example.customview;
 
 import android.view.View;
 
+import com.example.customview.barchart.BarChartActivity;
 import com.example.customview.base.BaseActivity;
+import com.example.customview.bezie.WaveViewActivity;
+import com.example.customview.loopview.LoopViewActivity;
+import com.example.customview.ninepicture.NineCellActivity;
+import com.example.customview.shadow.ShadowActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -26,5 +31,9 @@ public class MainActivity extends BaseActivity {
 
     public void goToBarChartView(View view) {
         startAct(BarChartActivity.class);
+    }
+
+    public void goToShadowView(View view) {
+        startAct(ShadowActivity.class);
     }
 }

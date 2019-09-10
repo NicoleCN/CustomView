@@ -1,7 +1,7 @@
-package com.example.customview;
+package com.example.customview.loopview;
 
+import com.example.customview.R;
 import com.example.customview.base.BaseActivity;
-import com.example.customview.loopview.LoopView;
 
 import java.util.ArrayList;
 import java.util.List;

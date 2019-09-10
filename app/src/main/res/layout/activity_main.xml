@@ -13,29 +13,36 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="loopView"
-            android:onClick="goToLoopView"/>
+            android:onClick="goToLoopView"
+            android:text="loopView" />
 
         <Button
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="nineCell"
-            android:onClick="goToNineCell"/>
+            android:layout_marginTop="20dp"
+            android:onClick="goToNineCell"
+            android:text="nineCell" />
 
         <Button
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="waveView"
-            android:onClick="goToWaveView"/>
+            android:layout_marginTop="20dp"
+            android:onClick="goToWaveView"
+            android:text="waveView" />
 
         <Button
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="barChartView"
-            android:onClick="goToBarChartView"/>
+            android:layout_marginTop="20dp"
+            android:onClick="goToBarChartView"
+            android:text="barChartView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="goToShadowView"
+            android:text="shadowView" />
 
     </LinearLayout>
 
