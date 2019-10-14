@@ -44,6 +44,20 @@
             android:onClick="goToShadowView"
             android:text="shadowView" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="goToCalendar"
+            android:text="calendar" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="goTo3D"
+            android:text="3D" />
+
     </LinearLayout>
 
 

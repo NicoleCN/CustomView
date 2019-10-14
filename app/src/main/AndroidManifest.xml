@@ -36,6 +36,12 @@
         <activity
             android:name=".shadow.ShadowActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".calendar.CalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".threed.ThreeDActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
