@@ -49,10 +49,6 @@ public abstract class FlipLayout extends LinearLayout {
         mBackLinearLayout = findViewById(R.id.flip_back_LinearLayout);
         mFrontLinearLayout.addView(getFrontChildView());
         mBackLinearLayout.addView(getBackChildView());
-        int distance = 100;
-        float scale = getContext().getResources().getDisplayMetrics().density * distance;
-        mFrontLinearLayout.setCameraDistance(scale);
-        mBackLinearLayout.setCameraDistance(scale);
     }
 
     protected abstract View getBackChildView();
