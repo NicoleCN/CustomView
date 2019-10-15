@@ -8,6 +8,7 @@ import com.example.customview.base.BaseActivity;
 import com.example.customview.bezie.WaveViewActivity;
 import com.example.customview.calendar.CalendarActivity;
 import com.example.customview.loopview.LoopViewActivity;
+import com.example.customview.movearoundlayout.MoveAroundActivity;
 import com.example.customview.ninepicture.NineCellActivity;
 import com.example.customview.shadow.ShadowActivity;
 import com.example.customview.threed.ThreeDActivity;
@@ -44,5 +45,9 @@ public class MainActivity extends BaseActivity {
 
     public void goTo3D(View view) {
         startAct(ThreeDActivity.class);
+    }
+
+    public void goToMoveAround(View view) {
+        startAct(MoveAroundActivity.class);
     }
 }

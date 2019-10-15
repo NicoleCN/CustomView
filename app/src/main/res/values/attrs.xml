@@ -48,4 +48,8 @@
             <enum name="december" value="11" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="RoundCornerImageView">
+        <attr name="corners" />
+    </declare-styleable>
 </resources>
