@@ -11,6 +11,7 @@ import com.example.customview.base.BaseActivity;
 public class WaveViewActivity extends BaseActivity {
 
     private WaveView waveView;
+    private CircleWaveProgressView circleWaveProgressView;
 
     @Override
     protected int getLayoutId() {
@@ -20,10 +21,13 @@ public class WaveViewActivity extends BaseActivity {
     @Override
     protected void initView() {
         waveView = findViewById(R.id.waveView);
+        circleWaveProgressView = findViewById(R.id.circleWaveProgressView);
     }
 
     @Override
     protected void initData() {
         waveView.setProgress(75);
+        circleWaveProgressView.setProgressValue(75);
+        circleWaveProgressView.startAnimation();
     }
 }

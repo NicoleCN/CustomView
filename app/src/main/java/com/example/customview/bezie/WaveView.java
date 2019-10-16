@@ -15,6 +15,9 @@ import android.view.animation.LinearInterpolator;
 
 import androidx.annotation.Nullable;
 
+/**
+ * 这个不是很流畅
+ */
 public class WaveView extends View {
 
     //View的宽高

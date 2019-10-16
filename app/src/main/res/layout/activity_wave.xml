@@ -8,6 +8,12 @@
         android:id="@+id/waveView"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        />
+        android:layout_gravity="center" />
+
+    <com.example.customview.bezie.CircleWaveProgressView
+        android:id="@+id/circleWaveProgressView"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center" />
 </LinearLayout>

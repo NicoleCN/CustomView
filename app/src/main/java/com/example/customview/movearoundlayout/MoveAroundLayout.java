@@ -192,6 +192,7 @@ public class MoveAroundLayout extends FrameLayout {
     }
 
     private void handleGradient() {
+        //就是这么写的 添加闪光的效果
         mDx += mSpeedPx;
         mDy += mSpeedPx;
         mMatrix.setTranslate(mDx, mDy);
