@@ -271,6 +271,17 @@ public class LoopView extends View {
             case MotionEvent.ACTION_CANCEL:
             default:
                 if (!eventConsumed) {
+                    /**
+                     *@describe <关于弧长的计算>
+                     *
+                     * 弧长公式： L = α*R
+                     * 反余弦公式：arccos(cosα) = α
+                     * 由于之前是有顺时针偏移90度，
+                     * 所以实际弧度范围α2的值 ：α2 = π/2-α    （α=[0,π] α2 = [-π/2,π/2]）
+                     * 根据正弦余弦转换公式 cosα = sin(π/2-α)
+                     * 代入，得： cosα = sin(π/2-α) = sinα2 = (R - y) / R
+                     * 所以弧长 L = arccos(cosα)*R = arccos((R - y) / R)*R
+                     */
                     //抬起的y
                     /*float y = event.getY();
                     double l = Math.acos((radius - y) / radius) * radius;
@@ -298,7 +309,7 @@ public class LoopView extends View {
         cancelHandler();
         if (type == LoopUtil.TYPE_FLING || type == LoopUtil.TYPE_DRAG) {
             mOffset = totalScrollY % maxItemHeight;
-            //超过办个自动转到下个
+            //超过半个自动转到下个
             if (mOffset > maxItemHeight / 2f) {
                 mOffset = (int) (maxItemHeight - (float) mOffset);
             } else {

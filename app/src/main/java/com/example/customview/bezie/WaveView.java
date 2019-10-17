@@ -124,7 +124,6 @@ public class WaveView extends View {
     private void drawWavePath(Canvas canvas) {
         //根据进度改变起点坐标的y值
         startPoint.y = (int) ((1 - (progress / 100.0)) * (height / 2 + width / 2));
-        Log.e("TAG", "startPoint.y:" + startPoint.y);
         //移动区域起点
         path.moveTo(startPoint.x, startPoint.y);
         int j = 1;

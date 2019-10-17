@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/android"
+        android:drawable="@drawable/ic_android_svg"
+        android:state_selected="false" />
+    <item
+        android:id="@+id/love"
+        android:drawable="@drawable/ic_love_svg"
+        android:state_selected="true" />
+
+    <transition
+        android:drawable="@drawable/tran_android_2_love"
+        android:fromId="@id/android"
+        android:toId="@id/love" />
+
+    <transition
+        android:drawable="@drawable/tran_love_2_android"
+        android:fromId="@id/love"
+        android:toId="@id/android" />
+</animated-selector>

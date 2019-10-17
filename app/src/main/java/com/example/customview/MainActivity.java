@@ -12,6 +12,8 @@ import com.example.customview.movearoundlayout.MoveAroundActivity;
 import com.example.customview.ninepicture.NineCellActivity;
 import com.example.customview.shadow.ShadowActivity;
 import com.example.customview.threed.ThreeDActivity;
+import com.example.customview.vector.VectorActivity;
+import com.example.customview.xfermode.XFerModeActivity;
 
 public class MainActivity extends BaseActivity {
     @Override
@@ -49,5 +51,13 @@ public class MainActivity extends BaseActivity {
 
     public void goToMoveAround(View view) {
         startAct(MoveAroundActivity.class);
+    }
+
+    public void goToXFerMode(View view) {
+        startAct(XFerModeActivity.class);
+    }
+
+    public void goToVector(View view) {
+        startAct(VectorActivity.class);
     }
 }
