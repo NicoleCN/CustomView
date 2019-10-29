@@ -27,6 +27,5 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/xxjy"
         android:layout_marginTop="40dp"
-        android:visibility="gone"
         android:layout_gravity="center_horizontal"/>
 </LinearLayout>

@@ -28,7 +28,6 @@ public class AutoTestActivity extends BaseActivity implements View.OnClickListen
         button = findViewById(R.id.auto_test_button);
         imageView = findViewById(R.id.auto_test_ImageView);
         textView = findViewById(R.id.auto_test_TextView);
-
         button.setOnClickListener(this);
     }
 
@@ -38,7 +37,7 @@ public class AutoTestActivity extends BaseActivity implements View.OnClickListen
             case R.id.auto_test_button:
                 textView.setText("自动化测试完成");
                 textView.setVisibility(View.VISIBLE);
-                imageView.setVisibility(View.VISIBLE);
+                imageView.setImageResource(R.drawable.ic_android_svg);
                 break;
             default:
                 break;
