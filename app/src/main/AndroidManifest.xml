@@ -54,6 +54,9 @@
         <activity
             android:name=".gyro.GyroActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".autotest.AutoTestActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

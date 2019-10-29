@@ -4,6 +4,7 @@ package com.example.customview;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.customview.autotest.AutoTestActivity;
 import com.example.customview.barchart.BarChartActivity;
 import com.example.customview.base.BaseActivity;
 import com.example.customview.bezie.WaveViewActivity;
@@ -65,5 +66,9 @@ public class MainActivity extends BaseActivity {
 
     public void goToGyro(View view) {
         startAct(GyroActivity.class);
+    }
+
+    public void autoTest(View view) {
+        startAct(AutoTestActivity.class);
     }
 }
