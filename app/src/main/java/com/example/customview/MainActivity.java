@@ -15,6 +15,7 @@ import com.example.customview.movearoundlayout.MoveAroundActivity;
 import com.example.customview.ninepicture.NineCellActivity;
 import com.example.customview.shadow.ShadowActivity;
 import com.example.customview.threed.ThreeDActivity;
+import com.example.customview.verify.VerifyActivity;
 import com.example.customview.xfermode.XFerModeActivity;
 
 public class MainActivity extends BaseActivity {
@@ -70,5 +71,9 @@ public class MainActivity extends BaseActivity {
 
     public void autoTest(View view) {
         startAct(AutoTestActivity.class);
+    }
+
+    public void verifyCode(View view) {
+        startAct(VerifyActivity.class);
     }
 }

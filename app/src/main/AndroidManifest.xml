@@ -57,6 +57,9 @@
         <activity
             android:name=".autotest.AutoTestActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".verify.VerifyActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

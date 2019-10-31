@@ -21,49 +21,49 @@
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="goToNineCell"
-            android:text="nineCell" />
+            android:text="9宫格聚合" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="goToWaveView"
-            android:text="waveView" />
+            android:text="自定义波浪" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="goToBarChartView"
-            android:text="barChartView" />
+            android:text="自定义柱状图" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="goToShadowView"
-            android:text="shadowView" />
+            android:text="阴影" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="goToCalendar"
-            android:text="calendar" />
+            android:text="日历" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="goTo3D"
-            android:text="3D" />
+            android:text="3D翻转" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="goToMoveAround"
-            android:text="MoveAround" />
+            android:text="跑马灯边框" />
 
         <Button
             android:layout_width="match_parent"
@@ -77,21 +77,28 @@
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="goToVector"
-            android:text="Vector" />
+            android:text="矢量图" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="goToGyro"
-            android:text="gyro" />
+            android:text="陀螺仪" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:onClick="autoTest"
-            android:text="AutoTest" />
+            android:text="自动化测试" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:onClick="verifyCode"
+            android:text="验证码" />
 
     </LinearLayout>
 
