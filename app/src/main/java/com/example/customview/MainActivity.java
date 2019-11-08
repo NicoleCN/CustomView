@@ -14,6 +14,7 @@ import com.example.customview.loopview.LoopViewActivity;
 import com.example.customview.movearoundlayout.MoveAroundActivity;
 import com.example.customview.ninepicture.NineCellActivity;
 import com.example.customview.shadow.ShadowActivity;
+import com.example.customview.shinny.ShinnyActivity;
 import com.example.customview.threed.ThreeDActivity;
 import com.example.customview.verify.VerifyActivity;
 import com.example.customview.xfermode.XFerModeActivity;
@@ -75,5 +76,9 @@ public class MainActivity extends BaseActivity {
 
     public void verifyCode(View view) {
         startAct(VerifyActivity.class);
+    }
+
+    public void shinny(View view) {
+        startAct(ShinnyActivity.class);
     }
 }
