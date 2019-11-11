@@ -15,7 +15,6 @@ import android.graphics.RectF;
 import android.graphics.Region;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -170,14 +169,11 @@ public class ClickVerifyView extends View {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             int x = (int) event.getX();
             int y = (int) event.getY();
-            Log.e("zbx", "ACTION_DOWN");
             for (Region region : regions) {
                 if (region.contains(x, y)) {
-                    Log.e("zbx", "点在范围内");
                     isRandomProduce = false;
                     int index = regions.indexOf(region);
                     if (!tapIndex.contains(index)) {
-                        Log.e("zbx", "记录在选择顺序list中");
                         tapIndex.add(index);
                         tapPoints.add(new Point(x, y));
                     }
@@ -186,7 +182,6 @@ public class ClickVerifyView extends View {
                         for (Integer i : tapIndex) {
                             s.append(i);
                         }
-                        Log.e("zbx", "s.toString()" + s.toString());
                         int result = Integer.parseInt(s.toString());
                         //争取顺序是0123
                         if (result == 3210) {
@@ -250,15 +245,15 @@ public class ClickVerifyView extends View {
             String s = String.valueOf(mVerifyText.charAt(mVerifyText.length() - i - 1));
             int textSize = (int) textPaint.measureText(s);
             canvas.save();
-            //random范围去掉边 要去掉左右两个文字的距离
+            //random范围去掉边 要去掉左右半个文字的距离
             //再去掉两个像素防止重复
-            int x = random.nextInt(mWidth - textSize - 1);
-            int y = random.nextInt(mHeight - textSize - 1);
+            int x = getRandomX(textSize);
+            int y = getRandomY(textSize);
 
             // TODO: 2019-11-11  这里以后改下 最好不要用死循环
             while (checkPointLegal(x, y) || checkPointLegal(x, y + textSize) || checkPointLegal(x + textSize, y) || checkPointLegal(x + textSize, y + textSize)) {
-                x = random.nextInt(mWidth - textSize);
-                y = random.nextInt(mHeight - textSize);
+                x = getRandomX(textSize);
+                y = getRandomY(textSize);
             }
 
             textPoints.add(new Point(x, y));
@@ -275,7 +270,15 @@ public class ClickVerifyView extends View {
         }
     }
 
-    //文字不能碰到边
+    private int getRandomX(int textSize) {
+        return random.nextInt(mWidth - textSize * 3 / 2 - 2) + textSize / 2;
+    }
+
+    private int getRandomY(int textSize) {
+        return random.nextInt(mHeight - textSize * 3 / 2 - 2) + textSize / 2;
+    }
+
+    //文字不能碰到边 为true 不合法
     private boolean checkPointLegal(int x, int y) {
         for (Region region : regions) {
             if (region.contains(x, y)) {
