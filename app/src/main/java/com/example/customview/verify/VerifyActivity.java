@@ -15,4 +15,7 @@ public class VerifyActivity extends BaseActivity {
         return R.layout.activity_verify;
     }
 
+    @Override
+    protected void initView() {
+    }
 }
