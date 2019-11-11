@@ -189,6 +189,7 @@ public class ClickVerifyView extends View {
                             break;
                         } else {
                             Toast.makeText(getContext(), "验证失败!", Toast.LENGTH_SHORT).show();
+                            isRandomProduce = true;
                             break;
                         }
                     }
@@ -213,7 +214,6 @@ public class ClickVerifyView extends View {
             canvas.translate(x, y);
             canvas.rotate(degree);
             canvas.drawText(s, 0, textSize, textPaint);
-            regions.add(new Region(x, y, textSize + x, textSize + y));
             canvas.restore();
         }
         //绘制点击顺序
@@ -240,11 +240,11 @@ public class ClickVerifyView extends View {
         degrees.clear();
         tapIndex.clear();
         tapPoints.clear();
+        regions.clear();
         for (int i = 0; i < mVerifyText.length(); i++) {
             //为了后面的验证方便 所以倒着写
             String s = String.valueOf(mVerifyText.charAt(mVerifyText.length() - i - 1));
             int textSize = (int) textPaint.measureText(s);
-            canvas.save();
             //random范围去掉边 要去掉左右半个文字的距离
             //再去掉两个像素防止重复
             int x = getRandomX(textSize);
@@ -257,6 +257,7 @@ public class ClickVerifyView extends View {
             }
 
             textPoints.add(new Point(x, y));
+            canvas.save();
             canvas.translate(x, y);
 
             //文字随机倾斜
@@ -265,17 +266,20 @@ public class ClickVerifyView extends View {
             canvas.rotate(degree);
 
             canvas.drawText(s, 0, textSize, textPaint);
-            regions.add(new Region(x, y, textSize + x, textSize + y));
+            Region region = new Region(x, y, textSize + x, textSize + y);
+            regions.add(region);
             canvas.restore();
         }
     }
 
     private int getRandomX(int textSize) {
-        return random.nextInt(mWidth - textSize * 3 / 2 - 2) + textSize / 2;
+        int x = random.nextInt((int) (mWidth - textSize * 3.0f / 2 - 2)) + textSize / 2;
+        return x;
     }
 
     private int getRandomY(int textSize) {
-        return random.nextInt(mHeight - textSize * 3 / 2 - 2) + textSize / 2;
+        int y = random.nextInt((int) (mHeight - textSize * 3.0f / 2 - 2)) + textSize / 2;
+        return y;
     }
 
     //文字不能碰到边 为true 不合法
