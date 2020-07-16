@@ -15,6 +15,7 @@ import com.example.customview.movearoundlayout.MoveAroundActivity;
 import com.example.customview.ninepicture.NineCellActivity;
 import com.example.customview.shadow.ShadowActivity;
 import com.example.customview.shinny.ShinnyActivity;
+import com.example.customview.showalltextview.TextViewActivity;
 import com.example.customview.threed.ThreeDActivity;
 import com.example.customview.verify.VerifyActivity;
 import com.example.customview.xfermode.XFerModeActivity;
@@ -80,5 +81,9 @@ public class MainActivity extends BaseActivity {
 
     public void shinny(View view) {
         startAct(ShinnyActivity.class);
+    }
+
+    public void showAllText(View view) {
+        startAct(TextViewActivity.class);
     }
 }
